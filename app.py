@@ -3,7 +3,7 @@ import model
 from flask import Flask, request, render_template
 from markupsafe import Markup
 
-API_KEY = "dnltQ6zP5xKe04QUFtm1lUOUeLLgkA3E"
+API_KEY = "your API key"
 app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
