@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}">
+    <title>Прогноз погоды</title>
+</head>
+<body>
+    <h1>Прогноз погоды</h1>
+    {% if weather_data %}
+        <p>Температура: {{ weather_data.temperature }} °C</p>
+        <p>Влажность: {{ weather_data.humidity }}%</p>
+        <p>Скорость ветра: {{ weather_data.wind_speed }} м/с</p>
+        <p>Вероятность дождя: {{ weather_data.precipitation_probability }}%</p>
+    {% else %}
+        <p>Не удалось получить данные о погоде.</p>
+    {% endif %}
+    <a href="/">Назад</a>
+</body>
+</html>
+

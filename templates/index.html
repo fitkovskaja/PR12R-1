@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}">
+    <title>Проверка погодных условий</title>
+</head>
+<body>
+    <h1>Выберите начальную и конечную точку маршрута</h1>
+
+    <form action="/" method="POST">
+        <label for="starting_city">Начальный город:</label>
+        <input type="text" id="starting_city" name="starting_city" required><br><br>
+
+        <label for="end_city">Конечный город:</label>
+        <input type="text" id="end_city" name="end_city" required><br><br>
+
+        <label for="mode">Выберите свой погодный режим:</label>
+        <select name="mode" id="mode" required>
+          <option value="warm weather">Теплая погода</option>
+          <option value="moderate weather">Нейтральная погода</option>
+          <option value="cool weather">Холодная погода</option>
+        </select>
+
+        <button type="submit">Проверка погодных условий</button>
+    </form>
+</body>
+</html>
